@@ -1,0 +1,434 @@
+[
+  {
+    "id": "refugio_bed_1",
+    "name": "Cama Pixel",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "bed",
+    "image": "/assets/decor/bed_refugio_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_bed_2",
+    "name": "Cama Estelar",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "bed",
+    "image": "/assets/decor/bed_refugio_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_lamp_1",
+    "name": "Luminária Byte",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "lamp",
+    "image": "/assets/decor/lamp_refugio_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_lamp_2",
+    "name": "Cristal Luminoso",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "lamp",
+    "image": "/assets/decor/lamp_refugio_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_companion_1",
+    "name": "Amigo Robô",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "companion",
+    "image": "/assets/decor/companion_refugio_1.png",
+    "price": 135,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_companion_2",
+    "name": "Slime Luminoso",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "companion",
+    "image": "/assets/decor/companion_refugio_2.png",
+    "price": 160,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_rug_1",
+    "name": "Tapete Grid",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "rug",
+    "image": "/assets/decor/rug_refugio_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_rug_2",
+    "name": "Tapete Constelação",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "rug",
+    "image": "/assets/decor/rug_refugio_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_wall_decor_1",
+    "name": "Quadro do Explorador",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "wall_decor",
+    "image": "/assets/decor/wall_refugio_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_wall_decor_2",
+    "name": "Painel de Cristais",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "wall_decor",
+    "image": "/assets/decor/wall_refugio_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_window_view_1",
+    "name": "Vista Alternativa",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "window_view",
+    "image": "/assets/worlds/refugio-view-alt.png",
+    "price": 90,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "refugio_window_view_2",
+    "name": "Horizonte Especial",
+    "kind": "decor",
+    "worldId": "refugio",
+    "slot": "window_view",
+    "image": "/assets/worlds/refugio-view-alt.png",
+    "price": 115,
+    "description": "Decoração do mundo Refúgio Pixel."
+  },
+  {
+    "id": "jardim_bed_1",
+    "name": "Cama Pixel",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "bed",
+    "image": "/assets/decor/bed_jardim_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_bed_2",
+    "name": "Cama Estelar",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "bed",
+    "image": "/assets/decor/bed_jardim_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_lamp_1",
+    "name": "Luminária Byte",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "lamp",
+    "image": "/assets/decor/lamp_jardim_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_lamp_2",
+    "name": "Cristal Luminoso",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "lamp",
+    "image": "/assets/decor/lamp_jardim_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_companion_1",
+    "name": "Amigo Robô",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "companion",
+    "image": "/assets/decor/companion_jardim_1.png",
+    "price": 135,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_companion_2",
+    "name": "Slime Luminoso",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "companion",
+    "image": "/assets/decor/companion_jardim_2.png",
+    "price": 160,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_rug_1",
+    "name": "Tapete Grid",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "rug",
+    "image": "/assets/decor/rug_jardim_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_rug_2",
+    "name": "Tapete Constelação",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "rug",
+    "image": "/assets/decor/rug_jardim_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_wall_decor_1",
+    "name": "Quadro do Explorador",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "wall_decor",
+    "image": "/assets/decor/wall_jardim_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_wall_decor_2",
+    "name": "Painel de Cristais",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "wall_decor",
+    "image": "/assets/decor/wall_jardim_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_window_view_1",
+    "name": "Vista Alternativa",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "window_view",
+    "image": "/assets/worlds/jardim-view-alt.png",
+    "price": 90,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "jardim_window_view_2",
+    "name": "Horizonte Especial",
+    "kind": "decor",
+    "worldId": "jardim",
+    "slot": "window_view",
+    "image": "/assets/worlds/jardim-view-alt.png",
+    "price": 115,
+    "description": "Decoração do mundo Jardim Neon."
+  },
+  {
+    "id": "floresta_bed_1",
+    "name": "Cama Pixel",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "bed",
+    "image": "/assets/decor/bed_floresta_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_bed_2",
+    "name": "Cama Estelar",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "bed",
+    "image": "/assets/decor/bed_floresta_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_lamp_1",
+    "name": "Luminária Byte",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "lamp",
+    "image": "/assets/decor/lamp_floresta_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_lamp_2",
+    "name": "Cristal Luminoso",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "lamp",
+    "image": "/assets/decor/lamp_floresta_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_companion_1",
+    "name": "Amigo Robô",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "companion",
+    "image": "/assets/decor/companion_floresta_1.png",
+    "price": 135,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_companion_2",
+    "name": "Slime Luminoso",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "companion",
+    "image": "/assets/decor/companion_floresta_2.png",
+    "price": 160,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_rug_1",
+    "name": "Tapete Grid",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "rug",
+    "image": "/assets/decor/rug_floresta_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_rug_2",
+    "name": "Tapete Constelação",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "rug",
+    "image": "/assets/decor/rug_floresta_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_wall_decor_1",
+    "name": "Quadro do Explorador",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "wall_decor",
+    "image": "/assets/decor/wall_floresta_1.png",
+    "price": 90,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_wall_decor_2",
+    "name": "Painel de Cristais",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "wall_decor",
+    "image": "/assets/decor/wall_floresta_2.png",
+    "price": 115,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_window_view_1",
+    "name": "Vista Alternativa",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "window_view",
+    "image": "/assets/worlds/floresta-view-alt.png",
+    "price": 90,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "floresta_window_view_2",
+    "name": "Horizonte Especial",
+    "kind": "decor",
+    "worldId": "floresta",
+    "slot": "window_view",
+    "image": "/assets/worlds/floresta-view-alt.png",
+    "price": 115,
+    "description": "Decoração do mundo Floresta Mágica."
+  },
+  {
+    "id": "apple",
+    "name": "Maçã Estelar",
+    "kind": "food",
+    "worldId": null,
+    "slot": null,
+    "image": "/assets/food/apple.png",
+    "price": 25,
+    "satiety": 22,
+    "heal": 11,
+    "description": "Recupera saciedade e inicia regeneração gradual."
+  },
+  {
+    "id": "cookie",
+    "name": "Biscoito Lógico",
+    "kind": "food",
+    "worldId": null,
+    "slot": null,
+    "image": "/assets/food/cookie.png",
+    "price": 35,
+    "satiety": 28,
+    "heal": 14,
+    "description": "Recupera saciedade e inicia regeneração gradual."
+  },
+  {
+    "id": "carrot",
+    "name": "Cenoura Luminosa",
+    "kind": "food",
+    "worldId": null,
+    "slot": null,
+    "image": "/assets/food/carrot.png",
+    "price": 30,
+    "satiety": 25,
+    "heal": 12,
+    "description": "Recupera saciedade e inicia regeneração gradual."
+  },
+  {
+    "id": "berry",
+    "name": "Frutas da Floresta",
+    "kind": "food",
+    "worldId": null,
+    "slot": null,
+    "image": "/assets/food/berry.png",
+    "price": 45,
+    "satiety": 38,
+    "heal": 19,
+    "description": "Recupera saciedade e inicia regeneração gradual."
+  },
+  {
+    "id": "sandwich",
+    "name": "Sanduíche Byte",
+    "kind": "food",
+    "worldId": null,
+    "slot": null,
+    "image": "/assets/food/sandwich.png",
+    "price": 70,
+    "satiety": 50,
+    "heal": 25,
+    "description": "Recupera saciedade e inicia regeneração gradual."
+  },
+  {
+    "id": "cake",
+    "name": "Bolo Galáctico",
+    "kind": "food",
+    "worldId": null,
+    "slot": null,
+    "image": "/assets/food/cake.png",
+    "price": 100,
+    "satiety": 70,
+    "heal": 35,
+    "description": "Recupera saciedade e inicia regeneração gradual."
+  }
+]

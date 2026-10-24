@@ -1,0 +1,6 @@
+<!-- Place this under android/app/src/debug/AndroidManifest.xml after flutter create.
+     Debug-only: allow HTTP on your LAN. Release must use HTTPS. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:usesCleartextTraffic="true" />
+</manifest>

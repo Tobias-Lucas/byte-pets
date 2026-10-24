@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "decor/bed_floresta_1.png",
+      "path": "/assets/decor/bed_floresta_1.png",
+      "width": 500,
+      "height": 330,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "e85410efa6571be7e2a8e65f82408d6012561b501bab227f6f22548569fb2600"
+    },
+    {
+      "id": "decor/bed_floresta_2.png",
+      "path": "/assets/decor/bed_floresta_2.png",
+      "width": 500,
+      "height": 330,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "caf40d90ed8696bfe5b2939650a596ac09dd0dbeadd79b0425b67ac8c53b14a7"
+    },
+    {
+      "id": "decor/bed_jardim_1.png",
+      "path": "/assets/decor/bed_jardim_1.png",
+      "width": 500,
+      "height": 330,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "7d38811826ebebe5dda8d1b34676189e02aad9666d50aabee34f9ccb243674f2"
+    },
+    {
+      "id": "decor/bed_jardim_2.png",
+      "path": "/assets/decor/bed_jardim_2.png",
+      "width": 500,
+      "height": 330,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "e7ad611f54ec2098378a419a56a1520c6077f21e87b781b3ed207d0900d5e190"
+    },
+    {
+      "id": "decor/bed_refugio_1.png",
+      "path": "/assets/decor/bed_refugio_1.png",
+      "width": 500,
+      "height": 330,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "83b5028f9b748deea9b08c7c603903daddacb63bab393aac171fc146debfc2cd"
+    },
+    {
+      "id": "decor/bed_refugio_2.png",
+      "path": "/assets/decor/bed_refugio_2.png",
+      "width": 500,
+      "height": 330,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "207103019762c21a46cf94a6744ab4c209b29bec454d43118cde40f472e46379"
+    },
+    {
+      "id": "decor/companion_floresta_1.png",
+      "path": "/assets/decor/companion_floresta_1.png",
+      "width": 310,
+      "height": 310,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "81e753802f1ebdc4be1a9e361bd845cb7b0124f94536421f0f78cceb4f7a5cd8"
+    },
+    {
+      "id": "decor/companion_floresta_2.png",
+      "path": "/assets/decor/companion_floresta_2.png",
+      "width": 310,
+      "height": 310,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "379b384b8dff1c56218e54701a7a80a5b58aafe9ad3824c09fb8fc27174a4725"
+    },
+    {
+      "id": "decor/companion_jardim_1.png",
+      "path": "/assets/decor/companion_jardim_1.png",
+      "width": 310,
+      "height": 310,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "8edd8081719f3cc5c48909ae2a9baa04eb23687e0bb65ebc309678224542384c"
+    },
+    {
+      "id": "decor/companion_jardim_2.png",
+      "path": "/assets/decor/companion_jardim_2.png",
+      "width": 310,
+      "height": 310,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "035cb7fe0d8b49664dc0eec3b38b1fa7bb563cf83ae9a3155f3944579c4fd8aa"
+    },
+    {
+      "id": "decor/companion_refugio_1.png",
+      "path": "/assets/decor/companion_refugio_1.png",
+      "width": 310,
+      "height": 310,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "1e2275a9d44dd65f8b91374e35301cb2f89edfbdcb43902e61f95cd906a94bad"
+    },
+    {
+      "id": "decor/companion_refugio_2.png",
+      "path": "/assets/decor/companion_refugio_2.png",
+      "width": 310,
+      "height": 310,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "b2f722b62be9e1d8a6a87eff1565f12e22ef4f9643fc9284cc0875b98254f428"
+    },
+    {
+      "id": "decor/lamp_floresta_1.png",
+      "path": "/assets/decor/lamp_floresta_1.png",
+      "width": 290,
+      "height": 320,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "d56fba8c53fb8c13c0be13b912e257c416a528fe9007818e2e2bbbb0fbe59924"
+    },
+    {
+      "id": "decor/lamp_floresta_2.png",
+      "path": "/assets/decor/lamp_floresta_2.png",
+      "width": 290,
+      "height": 320,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "316eacd93d332ba97514bacfc053fbf1331839f787037de2511bb7e00e022a57"
+    },
+    {
+      "id": "decor/lamp_jardim_1.png",
+      "path": "/assets/decor/lamp_jardim_1.png",
+      "width": 290,
+      "height": 320,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "15a6e420449ab988ed4619bd6a1c8220ee9c70a4db262953869003d3fa6e19e7"
+    },
+    {
+      "id": "decor/lamp_jardim_2.png",
+      "path": "/assets/decor/lamp_jardim_2.png",
+      "width": 290,
+      "height": 320,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "5a503cd02fb036e4b69d1b60dc10e3019e4d5c499d3c329dffd3538386edd021"
+    },
+    {
+      "id": "decor/lamp_refugio_1.png",
+      "path": "/assets/decor/lamp_refugio_1.png",
+      "width": 290,
+      "height": 320,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "5602302236dfb6d170c5764b84c42845eedba10fc94cb11abad383a6bc0d7f89"
+    },
+    {
+      "id": "decor/lamp_refugio_2.png",
+      "path": "/assets/decor/lamp_refugio_2.png",
+      "width": 290,
+      "height": 320,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "1fc95c83552be715d02d8318e37e97d279b95331d44ffc930a63a017f49522f4"
+    },
+    {
+      "id": "decor/rug_floresta_1.png",
+      "path": "/assets/decor/rug_floresta_1.png",
+      "width": 414,
+      "height": 138,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "f741c44931798215ac82f2c75bc38aef5f082a74f305d269b9ecdba2baf94493"
+    },
+    {
+      "id": "decor/rug_floresta_2.png",
+      "path": "/assets/decor/rug_floresta_2.png",
+      "width": 414,
+      "height": 138,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "f741c44931798215ac82f2c75bc38aef5f082a74f305d269b9ecdba2baf94493"
+    },
+    {
+      "id": "decor/rug_jardim_1.png",
+      "path": "/assets/decor/rug_jardim_1.png",
+      "width": 414,
+      "height": 138,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "1d508059d21a1512f955526f6ee54f570f5f05d7cbad5dfab68852dcd492afea"
+    },
+    {
+      "id": "decor/rug_jardim_2.png",
+      "path": "/assets/decor/rug_jardim_2.png",
+      "width": 414,
+      "height": 138,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "1d508059d21a1512f955526f6ee54f570f5f05d7cbad5dfab68852dcd492afea"
+    },
+    {
+      "id": "decor/rug_refugio_1.png",
+      "path": "/assets/decor/rug_refugio_1.png",
+      "width": 414,
+      "height": 138,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "cae52dc82abf01344df431e80df75da2bf45792aee4ba8d21eafc02d2a18ce73"
+    },
+    {
+      "id": "decor/rug_refugio_2.png",
+      "path": "/assets/decor/rug_refugio_2.png",
+      "width": 414,
+      "height": 138,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "cae52dc82abf01344df431e80df75da2bf45792aee4ba8d21eafc02d2a18ce73"
+    },
+    {
+      "id": "decor/wall_decor_floresta_1.png",
+      "path": "/assets/decor/wall_decor_floresta_1.png",
+      "width": 335,
+      "height": 335,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "2e3fd0b585a8f3a6831a434945bd8b10ab2c696d0237415adc86ff547491116e"
+    },
+    {
+      "id": "decor/wall_decor_floresta_2.png",
+      "path": "/assets/decor/wall_decor_floresta_2.png",
+      "width": 335,
+      "height": 335,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "af53e89ce18ab3ae83072963d948023469aa1f0f6bd7e10fcb380d195c7291f0"
+    },
+    {
+      "id": "decor/wall_decor_jardim_1.png",
+      "path": "/assets/decor/wall_decor_jardim_1.png",
+      "width": 335,
+      "height": 335,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "68893119d9da5c5b78a27fb902d69e8098faf9ac16e4b5ecae3cea208b496e7e"
+    },
+    {
+      "id": "decor/wall_decor_jardim_2.png",
+      "path": "/assets/decor/wall_decor_jardim_2.png",
+      "width": 335,
+      "height": 335,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "fd91df157630b99c5d39c6e7a5e3adf7a1d0fbf0bf573d2f43ca753b191d3df4"
+    },
+    {
+      "id": "decor/wall_decor_refugio_1.png",
+      "path": "/assets/decor/wall_decor_refugio_1.png",
+      "width": 335,
+      "height": 335,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "6f4c31b4738ed8ea85d89712c6a333521a801e98028f5c23c854028ebaa01cb4"
+    },
+    {
+      "id": "decor/wall_decor_refugio_2.png",
+      "path": "/assets/decor/wall_decor_refugio_2.png",
+      "width": 335,
+      "height": 335,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "491ad97b8497938a86fa0a951d1fea5b2a4c6d899597b1eb059ae69f2747a0ea"
+    },
+    {
+      "id": "decor/wall_floresta_1.png",
+      "path": "/assets/decor/wall_floresta_1.png",
+      "width": 300,
+      "height": 220,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "e285759e3b8ab3c08c9814d050ddbc3292b48ad2380d3d246db16ea8f2e6caec"
+    },
+    {
+      "id": "decor/wall_floresta_2.png",
+      "path": "/assets/decor/wall_floresta_2.png",
+      "width": 300,
+      "height": 220,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "b76c73432cb9dfdda89f6e4dbeb2479d7105667f4c8498990ca632928833d7c0"
+    },
+    {
+      "id": "decor/wall_jardim_1.png",
+      "path": "/assets/decor/wall_jardim_1.png",
+      "width": 300,
+      "height": 220,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "68ae40062a1b432230b4ca64c30cec182791650b785e4b3cb62976895bef91c7"
+    },
+    {
+      "id": "decor/wall_jardim_2.png",
+      "path": "/assets/decor/wall_jardim_2.png",
+      "width": 300,
+      "height": 220,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "3ef2c1a787eeaf46fced38e43387a96ee4d74439679d0e915fc1bfa246d5035a"
+    },
+    {
+      "id": "decor/wall_refugio_1.png",
+      "path": "/assets/decor/wall_refugio_1.png",
+      "width": 300,
+      "height": 220,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "5d5aa24adf815b171895cf7a9cd5728a356775a3baea8125056e9e6fa9769dc1"
+    },
+    {
+      "id": "decor/wall_refugio_2.png",
+      "path": "/assets/decor/wall_refugio_2.png",
+      "width": 300,
+      "height": 220,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "13f80112b78bc06f97c57c1a892a21eb64608da251bd33a4b32f3ceae08e1ed4"
+    },
+    {
+      "id": "food/apple.png",
+      "path": "/assets/food/apple.png",
+      "width": 160,
+      "height": 160,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "c0ecfc319ca2bf4d5a70b1b6907f4528bfb8c146cb773b313a4d5e3e967fba2d"
+    },
+    {
+      "id": "food/berry.png",
+      "path": "/assets/food/berry.png",
+      "width": 160,
+      "height": 160,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "649b5d660a28ebaa05ba38e7bbf819886a0c5470102deceb64e1b8d912134f61"
+    },
+    {
+      "id": "food/cake.png",
+      "path": "/assets/food/cake.png",
+      "width": 160,
+      "height": 160,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "b6426c507ad4437fbc5e5b4e0ec80ca794a7dae5a3dd18d0966c8e4825e8bb39"
+    },
+    {
+      "id": "food/carrot.png",
+      "path": "/assets/food/carrot.png",
+      "width": 160,
+      "height": 160,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "e8a76f5e223ecd86c854cd27a44a9b766d618e85ceeb27b9bfb27a44ee663b2e"
+    },
+    {
+      "id": "food/cookie.png",
+      "path": "/assets/food/cookie.png",
+      "width": 160,
+      "height": 160,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "1ab5528488300ee2eebad40f7a6aa6657aa946da06d6fe9788956f100c5999d8"
+    },
+    {
+      "id": "food/sandwich.png",
+      "path": "/assets/food/sandwich.png",
+      "width": 160,
+      "height": 160,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "ebdc3ec44bb852742c4a067f670ce95f3b63534ab30af8f72e4d6e9d8c9ce509"
+    },
+    {
+      "id": "pets/blink.png",
+      "path": "/assets/pets/blink.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "590b61e0dc5c7f2f6f46e650a5bdc8afa9bddfdb4c837de639c140502fb01bbf"
+    },
+    {
+      "id": "pets/celebrate.png",
+      "path": "/assets/pets/celebrate.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "2f6c57d40414006f3fa68ac418c28c5b9eeab78fdcd9bd681e3bc302e49a6289"
+    },
+    {
+      "id": "pets/dirty.png",
+      "path": "/assets/pets/dirty.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "69ba1be112092e101627f9c06be2b5161c0094c6a8eee4a7ce303b0a274d299e"
+    },
+    {
+      "id": "pets/eat.png",
+      "path": "/assets/pets/eat.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "cf34931867b2d5c3ea1eb8944287d156d7efcb1126807ff5872f0caa839e41df"
+    },
+    {
+      "id": "pets/ghost.png",
+      "path": "/assets/pets/ghost.png",
+      "width": 120,
+      "height": 132,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "e86cd289f266dc562d07738a6381e1e4d8a3237fa2f360129868c9563da65e38"
+    },
+    {
+      "id": "pets/happy.png",
+      "path": "/assets/pets/happy.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "ca70f967d04b0963d58e3d602393ddbb3b02670eb7a0ae93d4d5f8f9bf7eec8b"
+    },
+    {
+      "id": "pets/idle.png",
+      "path": "/assets/pets/idle.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "92bc638a397eb0ad9cb3a3baaa165dda51793e49674ebc7316b950af5de4edbf"
+    },
+    {
+      "id": "pets/poop.png",
+      "path": "/assets/pets/poop.png",
+      "width": 128,
+      "height": 128,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "c44ed96eb8118b6356217f8d571ee64955c7f20432d6d306136b38ca023f520e"
+    },
+    {
+      "id": "pets/sleep.png",
+      "path": "/assets/pets/sleep.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "fa4e87a01e72ab3b8d36fdd1a6c5ca6ee2c5551119cd333bc7f162745b24a6e7"
+    },
+    {
+      "id": "pets/weak.png",
+      "path": "/assets/pets/weak.png",
+      "width": 280,
+      "height": 280,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "fa4e87a01e72ab3b8d36fdd1a6c5ca6ee2c5551119cd333bc7f162745b24a6e7"
+    },
+    {
+      "id": "worlds/floresta-base.png",
+      "path": "/assets/worlds/floresta-base.png",
+      "width": 1280,
+      "height": 720,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "4ac786990c293dcc3875eef0a3ccfc971d40d59745fad0b3efbea0a8521f2e78"
+    },
+    {
+      "id": "worlds/floresta-preview.png",
+      "path": "/assets/worlds/floresta-preview.png",
+      "width": 640,
+      "height": 360,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "1e28700117ce36feddeef46e88187ef3d81ab845f2522dcd1326768dcc657318"
+    },
+    {
+      "id": "worlds/floresta-view-alt.png",
+      "path": "/assets/worlds/floresta-view-alt.png",
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "0064dd8c7f1c12ae03ee5d783f1ff29a251b4e6e948040fc559740966be642d1"
+    },
+    {
+      "id": "worlds/floresta-view.png",
+      "path": "/assets/worlds/floresta-view.png",
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "cb481ae8ff5a5cede5b986815952a1718f3e4ee393acc387ed78804857217848"
+    },
+    {
+      "id": "worlds/jardim-base.png",
+      "path": "/assets/worlds/jardim-base.png",
+      "width": 1280,
+      "height": 720,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "e8b6f77daf2c4c8f1dab9e8e81af6d3e452999138bd3702bdb9358b02b7bf67a"
+    },
+    {
+      "id": "worlds/jardim-preview.png",
+      "path": "/assets/worlds/jardim-preview.png",
+      "width": 640,
+      "height": 360,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "57e36ce16d46a1d335549122c9f16712331e55e79bb0a42a4ee5b61f7ffa7e52"
+    },
+    {
+      "id": "worlds/jardim-view-alt.png",
+      "path": "/assets/worlds/jardim-view-alt.png",
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "1a6f1bae770eabefd456eb8498a8345d129caba8efa3a8bf01e9bb4fcdb353bd"
+    },
+    {
+      "id": "worlds/jardim-view.png",
+      "path": "/assets/worlds/jardim-view.png",
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "808e6812ba7b6d9d5a5734dc726d85102c608a80f1c6828568886ef3ebdf64e8"
+    },
+    {
+      "id": "worlds/refugio-base.png",
+      "path": "/assets/worlds/refugio-base.png",
+      "width": 1280,
+      "height": 720,
+      "format": "PNG",
+      "transparent": true,
+      "sha256": "1d593fa6c5887a79e1c6b07e0ccac4d94969c41d5a90e7641e0900b0eb3325cb"
+    },
+    {
+      "id": "worlds/refugio-preview.png",
+      "path": "/assets/worlds/refugio-preview.png",
+      "width": 640,
+      "height": 360,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "96166332749f5e0b133cbe52e81d659941a089e21f5bb6461f0927596f922057"
+    },
+    {
+      "id": "worlds/refugio-view-alt.png",
+      "path": "/assets/worlds/refugio-view-alt.png",
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "c06755654b80553180f7e969d758f3e578994b42312642151f2aa2e1bd81ce19"
+    },
+    {
+      "id": "worlds/refugio-view.png",
+      "path": "/assets/worlds/refugio-view.png",
+      "width": 400,
+      "height": 400,
+      "format": "PNG",
+      "transparent": false,
+      "sha256": "279b429fbe9ee9ad055680f7c73631e06fbdd075a2f30a20b3ce8e7eb03db112"
+    }
+  ]
+}

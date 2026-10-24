@@ -1,0 +1,133 @@
+/* BytePets Mobile 1.0: native-style smartphone adaptation. The desktop design remains unchanged. */
+.mobile-dock,.mobile-more-shade{display:none}
+@media(max-width:850px){
+ html,body{width:100%;max-width:100%;overflow:hidden;overscroll-behavior:none}
+ body{margin:0;font-size:14px;touch-action:pan-y}
+ #app{height:100dvh;overflow:hidden}
+ .app{height:100dvh;min-height:0;display:flex;flex-direction:column;gap:7px;max-width:100%;padding:env(safe-area-inset-top,0px) 8px 0!important;overflow:hidden}
+ .topbar,.topbar.staff-topbar{flex:0 0 auto!important;z-index:240;position:relative;max-height:57px;min-height:47px;margin:0;border-radius:13px;padding:5px 8px;box-shadow:0 3px 17px #0008}
+ .topbar .brand{min-width:0}.topbar .brand-title{font-size:1.32rem}.topbar .brand-mark{width:36px;height:36px}
+ .topbar .menu-toggle{display:none!important}
+ .topbar .account-mini .coin-pill{border-color:#415e9b;background:#172a51;font-size:.83rem;padding:6px 8px}
+ .topbar .account-mini .staff-identity{font-size:0!important;border:0;padding:0}.topbar .account-mini .staff-identity img{width:36px;height:36px}
+ .topbar .account-mini>.button{display:none!important}
+ .topbar .tabs{display:none!important}
+ .app main{width:100%;max-width:100%;min-height:0;flex:1;overflow-y:auto;overflow-x:hidden;padding:0 0 76px;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain}
+ .app main::-webkit-scrollbar{display:none}
+ .app main>section,.app main>.home-layout{min-height:0;max-width:100%}
+ .panel{border-radius:13px;padding:10px}
+ .button{min-height:43px;padding:9px 12px;font-size:.89rem;touch-action:manipulation}
+ .button.sm{min-height:35px}
+ .field{min-height:45px;font-size:16px}
+ .staff-app .field{font-size:16px}
+ .mobile-dock{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:400;height:calc(66px + env(safe-area-inset-bottom,0px));padding:5px 5px max(5px,env(safe-area-inset-bottom,0px));align-items:stretch;justify-content:space-around;gap:3px;background:linear-gradient(180deg,#111f42ed,#090e26fc);border-top:1px solid #427da4;box-shadow:0 -10px 23px #0009}
+ .dock-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;padding:3px 0;border-radius:10px;background:transparent;border:1px solid transparent;color:#a7beda;font-size:clamp(.64rem,2.5vw,.75rem);font-weight:700}
+ .dock-item svg{width:23px;height:23px;stroke-width:2}.dock-item.active{color:#87fff0;background:#173858;border-color:#48cbc8;box-shadow:inset 0 0 10px #66f6e51f}.dock-item span{white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+ .mobile-more-shade{display:block;position:fixed;inset:0 0 calc(66px + env(safe-area-inset-bottom,0px)) 0;z-index:390;background:#020716bb;backdrop-filter:blur(3px)}
+ .mobile-more-sheet{position:absolute;left:8px;right:8px;bottom:7px;background:#122449;border:1px solid #60e0dc;border-radius:20px;padding:14px;box-shadow:0 4px 42px #000c}
+ .mobile-more-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:#acffeb;font-size:1.1rem}
+ .mobile-more-head button{border:1px solid #54769d;border-radius:8px;background:#132f54;font-size:18px;width:36px;height:36px}
+ .mobile-more-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+ .mobile-more-option{display:flex;align-items:center;gap:10px;min-height:54px;padding:10px;border:1px solid #42678d;border-radius:12px;background:#142a50;color:#c9eef3;text-align:left;font-weight:700}
+ .mobile-more-option svg{width:22px;height:22px;color:#73f4e0}.logout-option{color:#ffc4d5}
+ .home-layout{display:flex!important;flex-direction:column!important;gap:9px}
+ .home-stage{padding:8px!important;flex:none!important}.home-stage .stage-header{padding:0 2px;margin-bottom:8px}
+ .home-stage .section-title{font-size:1.35rem}.home-stage .stage-header .button{min-height:33px;padding:5px 7px;font-size:.75rem}
+ .hero-stage{aspect-ratio:16/9;max-height:none}
+ .home-stage .pet-action-bar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));min-height:0!important;gap:4px;margin-top:8px}
+ .pet-action{width:100%!important;min-width:0;min-height:63px!important;font-size:.82rem!important;display:flex;align-items:center;flex-direction:column;gap:3px;justify-content:center;border-radius:9px}
+ .pet-action img{width:27px;height:27px}.pet-action .action-icon{font-size:1.7rem}
+ .home-side{display:block!important;flex:none!important}
+ .home-side .pet-hud{display:block!important;padding:11px}
+ .home-side .profile-line{margin-bottom:8px}.home-side .profile-line img{width:42px;height:42px}.home-side .pet-name{font-size:1.12rem}
+ .home-side .pet-hud .stat-row{margin-bottom:7px;display:grid;grid-template-columns:98px minmax(0,1fr);align-items:center;gap:5px}
+ .home-side .pet-hud .stat-row .names{font-size:.73rem;margin:0}.home-side .pet-hud .meter{height:10px}
+ .home-side .pet-hud .divider{margin:8px 0}.home-side .pet-hud .tiny-info{margin:4px 0;font-size:.72rem}
+ .home-side .quick-quests{display:none!important}
+ .arcade-screen .compact-heading,.worlds-screen .compact-heading,.shop-screen .compact-heading,.medals-screen .compact-heading{padding:7px 2px!important;margin:0 0 8px!important}
+ .arcade-screen .compact-heading h1,.worlds-screen .compact-heading h1,.compact-heading h1{font-size:1.5rem}
+ .arcade-screen .compact-heading p,.worlds-screen .compact-heading p{font-size:.75rem}
+ .arcade-screen,.worlds-screen,.shop-screen,.medals-screen{height:auto!important;display:block!important;overflow:visible!important}
+ .arcade-grid,.worlds-grid{height:auto!important;display:block!important}
+ .arcade-card{display:flex!important;flex-direction:column!important;height:auto!important;min-height:0!important;overflow:hidden}
+ .arcade-card>img{height:clamp(190px,37dvh,290px)!important;flex:none!important;object-fit:cover!important;width:100%;display:block}
+ .arcade-info{min-height:0!important;padding:12px!important}.arcade-info h2{font-size:1.33rem}.arcade-info p{font-size:.88rem}
+ .worlds-grid .card.cover{min-height:0!important;max-height:none!important}.worlds-grid .card.cover>img{height:clamp(190px,38dvh,300px)!important;flex:none!important}
+ .game-carousel-controls{margin:10px 0;justify-content:center;gap:10px}
+ .shop-filters{flex-wrap:nowrap!important;overflow-x:auto!important;scrollbar-width:none;padding-bottom:5px}.shop-filters .button{white-space:nowrap;flex-shrink:0}
+ .shop-grid{display:grid!important;grid-template-columns:1fr 1fr!important;grid-auto-rows:auto!important;gap:9px}.shop-item{padding:9px 6px}.shop-item img{height:76px!important;width:100%;max-width:110px}
+ .badge-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:auto!important}.badge-card{padding:9px}.skin-grid{grid-template-columns:1fr!important}
+ .game-fullscreen{height:calc(100dvh - 136px)!important;max-height:none!important;padding:5px!important;overflow:hidden!important}
+ .game-toolbar{min-height:33px!important}.game-title h2{font-size:1.36rem}.game-title .eyebrow{font-size:.67rem}
+ .game-center{justify-content:center;overflow:hidden}
+ .bridge-shell{gap:3px!important}.game-bridges .bridge-board{width:min(88vw,45dvh,390px)!important}
+ .bridge-controls{gap:3px!important}.rotation-button{width:43px;height:42px}
+ .game-snake .snake-canvas{width:min(86vw,39dvh,380px)!important;max-height:40dvh!important}
+ .snake-inputs{gap:7px!important}.dpad{grid-template-columns:repeat(3,46px)!important;grid-template-rows:repeat(3,43px)!important}
+ .game-pattern .pattern-sequence{margin:8px 0}.game-pattern .round-options{margin:10px auto}.game-pattern .round-tile{min-height:52px}
+ .test-screen{height:auto!important;min-height:calc(100dvh - 136px)!important;overflow:visible!important}
+ .test-question-panel{max-height:none!important;min-height:calc(100dvh - 140px)!important;overflow:visible!important;padding:9px!important}
+ .test-question-panel h1{max-height:none!important;line-height:1.25!important;font-size:1.24rem!important;margin:8px 0}
+ .test-question-panel .quiz-options{max-height:none!important;overflow:visible!important;width:100%!important}
+ .test-question-panel .quiz-answer{min-height:48px!important;font-size:.94rem!important;padding:10px!important;margin:6px 0!important}
+ .quiz-stage,.test-feedback,.test-review,.test-summary{min-height:0!important;height:auto!important;max-height:none!important;overflow:visible!important}
+ .quiz-footer{flex-wrap:wrap;gap:8px}.quiz-footer .button{min-height:43px}
+ .test-summary{display:flex!important;flex-direction:column!important}.test-summary .medal-graphic{flex:0 0 auto!important}
+ .test-feedback>img{max-height:110px!important}.explanation-box{font-size:.92rem;max-height:none!important}
+ .test-review .review-question{max-height:none!important;overflow:visible!important;gap:8px}.test-review .review-question p{font-size:.9rem}
+ .outcome-stage{height:auto!important;min-height:calc(100dvh - 150px)!important;max-height:none!important;margin:0!important;padding:12px!important}
+ .outcome-stage>img{width:clamp(100px,30vw,140px)!important;height:auto!important}.outcome-stage h1{font-size:2.2rem!important}
+ .staff-app .staff-screen-title{flex:0 0 auto!important;min-height:60px}.staff-screen-title h1{font-size:1.2rem}.staff-screen-title p{font-size:.76rem}
+ .staff-app .staff-screen-body{min-height:0!important;overflow-y:auto!important;scrollbar-width:none}
+ .staff-app .staff-content-grid,.staff-app .staff-stack{height:auto!important;min-height:0!important;display:block!important}
+ .staff-app .staff-content-grid>.panel,.staff-app .staff-stack>.panel{min-height:0!important;height:auto!important;overflow:visible!important;margin-bottom:9px;padding:12px}
+ .staff-app .staff-feature-grid{height:auto!important;grid-template-columns:1fr 1fr!important;grid-template-rows:auto!important;gap:8px;padding-top:10px}
+ .staff-app .staff-feature{min-height:107px;padding:10px;text-align:center}
+ .staff-app .staff-overview-grid{height:auto!important;grid-template-columns:1fr 1fr!important;gap:8px}
+ .staff-app .staff-metric{min-height:88px}
+ .staff-app .staff-settings-layout{height:auto!important;display:block!important;overflow:visible!important}
+ .staff-app .staff-settings-card{padding:14px;margin-bottom:12px}
+ .staff-mobile-tabs{display:flex!important;position:sticky;top:0;z-index:8;background:#0a1532;padding:5px 0;height:auto!important;min-height:43px}
+ .staff-screen-body.mobile-view-list .staff-content-grid,.staff-screen-body.mobile-view-edit .staff-content-grid{height:auto!important;min-height:0!important}
+ .staff-screen-body.mobile-view-list .staff-content-grid>.panel:first-child,.staff-screen-body.mobile-view-edit .staff-content-grid>.staff-stack,.staff-screen-body.mobile-view-edit .staff-content-grid>.staff-form-panel{height:auto!important;min-height:0!important}
+ .staff-stack>.editor-stage{height:auto!important;min-height:360px!important;overflow:visible!important}
+ .editor-form{min-height:0!important;gap:9px!important}.editor-form textarea.field{height:100px!important;min-height:70px!important}
+ .editor-form textarea.editor-options{height:120px!important}
+ .staff-reports,.friends-screen,.friends-visit,.staff-visit-screen{height:auto!important;min-height:0!important;overflow:visible!important}
+ .staff-reports .staff-result-table{max-height:none!important;overflow-x:auto!important}
+ .report-line,.report-head{min-width:0}.report-filters{grid-template-columns:1fr!important}
+ .staff-class-row{grid-template-columns:minmax(105px,1fr) 34px minmax(85px,1fr)!important}
+ .staff-feature .ui-icon{width:29px;height:29px}
+ .staff-screen-body:not(:has(.staff-mobile-tabs)) .staff-content-grid{height:auto!important;display:block!important}
+ .staff-screen-body:not(:has(.staff-mobile-tabs)) .staff-content-grid>.panel{height:auto!important;min-height:180px!important}
+ .staff-form-panel{justify-content:flex-start!important}
+ .staff-list-row{min-height:51px}.staff-list-row .button{min-height:34px}
+ .friends-columns{height:auto!important;display:block!important}.friends-columns>.panel{height:auto!important;margin-bottom:10px}
+ .friends-visit .hero-stage,.staff-visit-screen .hero-stage{flex:none!important;aspect-ratio:16/9!important}
+ .modal-backdrop,.mentor-modal-backdrop{padding:10px 10px 80px!important;z-index:350}
+ .modal{max-height:calc(100dvh - 130px)!important;overflow-y:auto!important;padding:14px!important}
+ .notification{bottom:calc(79px + env(safe-area-inset-bottom,0px));right:8px;left:8px;max-width:none;text-align:center}
+}
+@media(max-width:380px){.home-stage .pet-action{font-size:.7rem!important;min-height:57px!important}.dock-item{font-size:.6rem}.mobile-more-option{font-size:.81rem}.account-mini .coin-pill{font-size:.75rem}.pet-action img{width:24px;height:24px}}
+/* Standalone onboarding screens need real scroll for accessible forms and keyboards */
+@media(max-width:850px){
+ body:has(.setup-shell),body:has(.auth-wrap),body:has(.pending){overflow:auto}
+ #app:has(.setup-shell),#app:has(.auth-wrap),#app:has(.pending){height:auto;min-height:100dvh;overflow:visible}
+ .setup-shell{height:auto!important;min-height:100dvh!important;max-height:none!important;overflow:visible!important;padding:12px!important}
+ .setup-grid{height:auto!important;display:grid!important;grid-template-columns:1fr!important}
+ .setup-card{min-height:235px!important}
+ .setup-form{overflow:visible!important;min-height:0!important}
+ .auth-wrap{height:auto!important;min-height:100dvh!important;max-height:none!important;overflow:visible!important;margin:0 auto;padding:10px}
+ .auth-showcase{min-height:220px!important}.auth-showcase .copy h1{font-size:1.6rem!important}
+ .auth-pet{width:115px;top:10%}.auth-form{min-height:0!important;padding:14px!important}.auth-form h1{font-size:1.9rem}
+ .password-grid,.auth-form .two-cols{grid-template-columns:1fr!important}
+}
+/* Do not let the desktop full-height stage collapse in the mobile document flow. */
+@media(max-width:850px){
+ .home-stage .hero-stage{flex:0 0 auto!important;width:100%!important;aspect-ratio:16/9!important;height:auto!important;min-height:1px!important}
+ .module-tiles{height:auto!important;min-height:0!important;display:block!important;flex:none!important}
+ .module-card{height:auto!important;min-height:230px!important;max-height:none!important;flex:none!important;padding:14px!important;gap:9px!important}
+ .module-card .button{margin-top:12px!important}
+ .modules-screen,.modules-list,.challenges-screen{height:auto!important;min-height:0!important;overflow:visible!important;display:block!important}
+ .modules-screen .module-tiles,.modules-list .module-tiles{margin-top:10px!important}
+}

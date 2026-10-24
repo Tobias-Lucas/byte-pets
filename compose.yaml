@@ -1,0 +1,57 @@
+# Base stack for local and VPS. Choose an exposure overlay below.
+name: bytepets
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-bytepets}
+      POSTGRES_USER: ${POSTGRES_USER:-bytepets}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configure POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - private
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+      start_period: 15s
+    security_opt:
+      - no-new-privileges:true
+  bytepets:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_ENGINE: postgres
+      PGHOST: db
+      PGPORT: '5432'
+      PGUSER: ${POSTGRES_USER:-bytepets}
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Configure POSTGRES_PASSWORD in .env}
+      PGDATABASE: ${POSTGRES_DB:-bytepets}
+      NODE_ENV: production
+      PORT: '4173'
+      PYTHON_BIN: python3
+      DATA_DIR: /app/data
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-}
+    volumes:
+      - media_data:/app/data
+    expose:
+      - '4173'
+    networks:
+      - private
+      - edge
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  postgres_data:
+  media_data:
+networks:
+  private:
+    internal: true
+  edge:

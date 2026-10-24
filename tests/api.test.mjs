@@ -1,0 +1,73 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {spawn} from 'node:child_process';
+import {mkdtempSync,rmSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import os from 'node:os';
+import path from 'node:path';
+const port=48000+Math.floor(Math.random()*2000),temp=mkdtempSync(path.join(os.tmpdir(),'bytepets-v05-api-'));
+const base='http://127.0.0.1:'+port;
+const server=spawn(process.execPath,['server/index.mjs'],{cwd:fileURLToPath(new URL('../',import.meta.url)),env:{...process.env,DATA_DIR:temp,PORT:String(port)},stdio:'pipe'});
+let output='';server.stderr.on('data',x=>output+=x.toString());
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function wait(){for(let i=0;i<60;i++){try{if((await fetch(base+'/api/health')).ok)return}catch{}await sleep(80)}throw Error('Startup: '+output)}
+function client(){let cookie='';return {async req(p,method='GET',body){const res=await fetch(base+'/api'+p,{method,headers:{...(cookie?{cookie}:{}),...(body===undefined?{}:{'content-type':'application/json'})},body:body===undefined?undefined:JSON.stringify(body)});if(res.headers.get('set-cookie'))cookie=res.headers.get('set-cookie').split(';')[0];const data=await res.json();return {status:res.status,data}},get cookie(){return cookie}}}
+const manager=client(),student=client(),teacher=client(),second=client();
+test('v0.5 school onboarding, content, teacher permissions, daily games',async()=>{
+ await wait();
+ let x=await manager.req('/setup');assert.deepEqual(x.data,{configured:false,mode:null});
+ x=await manager.req('/setup','POST',{mode:'school',schoolName:'Escola Aurora',username:'diretora',password:'SeguraPass889',petName:'Nuvem'});
+ assert.equal(x.status,201,JSON.stringify(x.data));assert.equal(x.data.mode,'school');
+ const schoolId=x.data.state.schools[0].id,schoolCode=x.data.schoolCode;
+ for(const asset of ['games/pattern.webp','games/bridges.webp','games/snake.webp','pets/poop.png','ui/broom.png']){
+  const r=await fetch(base+'/assets/'+asset);assert.equal(r.status,200,asset);assert.match(r.headers.get('content-type'),/image\//);
+ }
+ x=await manager.req('/setup','POST',{mode:'school',schoolName:'Outra escola',username:'outro',password:'abc1234567'});assert.equal(x.status,409);
+ const cls=(await manager.req('/schools/'+schoolId+'/classes','POST',{name:'5 A'})).data;
+ const cls2=(await manager.req('/schools/'+schoolId+'/classes','POST',{name:'5 B'})).data;
+ assert.ok(cls.id&&cls2.id);
+ const roster=(await manager.req('/schools/'+schoolId+'/roster','POST',{studentName:'Ana Clara',enrollment:'202600011',classId:cls.id}));assert.equal(roster.status,201);
+ const r2=(await manager.req('/schools/'+schoolId+'/roster','POST',{studentName:'Bruno Lima',enrollment:'202600012',classId:cls2.id}));assert.equal(r2.status,201);
+ const bad=await student.req('/student/register','POST',{schoolCode,enrollment:'202600011',activationCode:'incorrect',username:'ana_byte',password:'Senha78999',petName:'Lumi'});assert.equal(bad.status,403);
+ x=await student.req('/student/register','POST',{schoolCode,enrollment:'202600011',activationCode:roster.data.activationCode,username:'ana_byte',password:'Senha78999',petName:'Lumi'});
+ assert.equal(x.status,201,JSON.stringify(x.data));assert.equal(x.data.state.pet.name,'Lumi');
+ x=await second.req('/student/register','POST',{schoolCode,enrollment:'202600012',activationCode:r2.data.activationCode,username:'bruno_byte',password:'Senha78999',petName:'Pixel'});assert.equal(x.status,201);
+ x=await second.req('/student/register','POST',{schoolCode,enrollment:'202600011',activationCode:roster.data.activationCode,username:'duplicata',password:'Senha78999',petName:'Dup'});assert.equal(x.status,409);
+ x=await student.req('/classes/join','POST',{code:cls2.joinCode});assert.equal(x.status,403);
+ const inv=(await manager.req('/schools/'+schoolId+'/teacher-invites','POST',{}));assert.equal(inv.status,201);
+ x=await teacher.req('/teacher-invite?token='+encodeURIComponent(inv.data.token));assert.equal(x.status,200);assert.equal(x.data.schoolName,'Escola Aurora');
+ x=await teacher.req('/teacher/register','POST',{inviteToken:inv.data.token,username:'profa_maria',password:'SeguraPass991'});assert.equal(x.status,201);assert.equal(x.data.state.approval.status,'pending');
+ x=await teacher.req('/schools/'+schoolId);assert.equal(x.status,403);
+ x=await teacher.req('/teacher/register','POST',{inviteToken:inv.data.token,username:'prof_fake',password:'SeguraPass991'});assert.equal(x.status,403);
+ let data=(await manager.req('/schools/'+schoolId+'/roster')).data;assert.equal(data.requests.length,1);
+ x=await manager.req('/schools/'+schoolId+'/teacher-requests/'+data.requests[0].id,'POST',{approve:true});assert.equal(x.status,200);
+ const teacherId=data.teachers.find(t=>t.username==='profa_maria')?.id||data.requests[0].accountId;
+ data=(await manager.req('/schools/'+schoolId+'/roster')).data;const approvedId=data.teachers.find(t=>t.username==='profa_maria').id;
+ x=await manager.req('/schools/'+schoolId+'/teacher-classes','POST',{teacherId:approvedId,classId:cls.id});assert.equal(x.status,200);
+ x=await teacher.req('/schools/'+schoolId+'/roster');assert.equal(x.status,200);assert.equal(x.data.classes.length,1);assert.equal(x.data.roster.length,1);assert.equal(x.data.roster[0].student_name,'Ana Clara');
+ x=await teacher.req('/schools/'+schoolId+'/roster','POST',{studentName:'Intruso',enrollment:'202699999',classId:cls.id});assert.equal(x.status,403);
+ const created=await teacher.req('/schools/'+schoolId+'/modules','POST',{title:'Matematica das Estrelas',subject:'Matematica',description:'Logica de numeros'});assert.equal(created.status,201);const mod=created.data;
+ const q=await teacher.req('/modules/'+mod.id+'/questions','POST',{type:'single',prompt:'Qual numero e par?',options:['3','4','5'],answer:'4',score:10});assert.equal(q.status,201);
+ x=await teacher.req('/modules/'+mod.id+'/publish','POST',{classIds:[cls2.id]});assert.equal(x.status,403);
+ x=await teacher.req('/modules/'+mod.id+'/publish','POST',{classIds:[cls.id]});assert.equal(x.status,200);
+ x=await student.req('/modules/'+mod.id+'/questions');assert.equal(x.status,200);assert.equal(x.data.questions.length,1);assert.equal(x.data.questions[0].answer,undefined);
+ x=await second.req('/modules/'+mod.id+'/questions');assert.equal(x.status,403);
+ x=await student.req('/questions/'+q.data.id+'/answer','POST',{answer:'4',attemptId:crypto.randomUUID()});assert.equal(x.status,200);assert.equal(x.data.score,10);assert.equal(x.data.medal,true);
+ x=await student.req('/questions/'+q.data.id+'/answer','POST',{answer:'4',attemptId:crypto.randomUUID()});assert.equal(x.data.score,0);
+ const gradebook=(await teacher.req('/schools/'+schoolId+'/reports')).data;
+ assert.equal(gradebook.classes.length,1);assert.equal(gradebook.classes[0].students[0].studentName,'Ana Clara');assert.equal(gradebook.classes[0].students[0].points,10);
+ x=await manager.req('/schools/'+schoolId+'/game-limit','POST',{limit:2});assert.equal(x.status,200);
+ x=await student.req('/games/start','POST',{type:'snake'});assert.equal(x.status,200);assert.deepEqual(x.data.round.targets,[2,4,6]);
+ x=await student.req('/games/finish','POST',{sessionId:x.data.sessionId,answer:[2,4,6]});assert.equal(x.status,200);assert.equal(x.data.correct,true);
+ x=await student.req('/games/start','POST',{type:'pattern'});assert.equal(x.status,200);
+ x=await student.req('/games/start','POST',{type:'bridges'});assert.equal(x.status,429);
+ const me=await student.req('/me');assert.equal(me.data.gameDaily.remaining,0);assert.equal(me.data.gameDaily.limit,2);
+ x=await teacher.req('/schools/'+schoolId+'/reports');assert.equal(x.status,200);
+ const repeated=await manager.req('/schools/'+schoolId+'/roster','POST',{studentName:'Ana Clone',enrollment:'202600011',classId:cls.id});assert.equal(repeated.status>=400,true);
+});
+test('school app boot mode persists after restart and mode cannot be reset',async()=>{
+ const x=await manager.req('/setup');assert.equal(x.data.mode,'school');assert.equal(x.data.configured,true);
+ const r=await fetch(base+'/assets/games/pattern.webp');assert.equal(r.status,200);
+});
+import {after} from 'node:test';
+after(()=>{server.kill();rmSync(temp,{recursive:true,force:true})});

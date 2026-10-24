@@ -1,0 +1,142 @@
+{
+  "version": "2.0-spec",
+  "canvas": {
+    "width": 1280,
+    "height": 720,
+    "renderScale": "contain",
+    "pixelated": true
+  },
+  "petAnchor": {
+    "x": 650,
+    "y": 496,
+    "z": 60
+  },
+  "commonSlots": [
+    {
+      "id": "window_view",
+      "name": "Vista da janela",
+      "anchor": {
+        "x": 640,
+        "y": 205
+      },
+      "maxSize": {
+        "w": 500,
+        "h": 330
+      },
+      "z": 5,
+      "behavior": "replace",
+      "notes": "Recorte vinculado a máscara da janela; fica atras do moldura do fundo."
+    },
+    {
+      "id": "wall_decor",
+      "name": "Quadro/decoração de parede",
+      "anchor": {
+        "x": 253,
+        "y": 190
+      },
+      "maxSize": {
+        "w": 250,
+        "h": 200
+      },
+      "z": 28,
+      "behavior": "replace"
+    },
+    {
+      "id": "bed",
+      "name": "Cama",
+      "anchor": {
+        "x": 220,
+        "y": 532
+      },
+      "maxSize": {
+        "w": 360,
+        "h": 230
+      },
+      "z": 40,
+      "behavior": "replace"
+    },
+    {
+      "id": "rug",
+      "name": "Tapete",
+      "anchor": {
+        "x": 664,
+        "y": 595
+      },
+      "maxSize": {
+        "w": 440,
+        "h": 140
+      },
+      "z": 20,
+      "behavior": "replace"
+    },
+    {
+      "id": "lamp",
+      "name": "Luminária",
+      "anchor": {
+        "x": 1025,
+        "y": 228
+      },
+      "maxSize": {
+        "w": 185,
+        "h": 275
+      },
+      "z": 44,
+      "behavior": "replace"
+    },
+    {
+      "id": "companion",
+      "name": "Companheiro",
+      "anchor": {
+        "x": 954,
+        "y": 528
+      },
+      "maxSize": {
+        "w": 180,
+        "h": 190
+      },
+      "z": 58,
+      "behavior": "replace"
+    }
+  ],
+  "worlds": [
+    {
+      "id": "refugio-pixel",
+      "name": "Refúgio Pixel",
+      "startUnlocked": true,
+      "theme": "habitat eletrônico acolhedor; azul/ciano",
+      "unlock": {
+        "type": "default"
+      },
+      "backgroundTarget": "worlds/refugio-pixel/bg-clean.png",
+      "previewTarget": "worlds/refugio-pixel/card.png",
+      "reference": "assets_referencias/refugio_pixel_concept.png"
+    },
+    {
+      "id": "jardim-neon",
+      "name": "Jardim Neon",
+      "startUnlocked": false,
+      "theme": "flores de luz e cristais; verde/ciano",
+      "unlock": {
+        "levelAtLeast": 3,
+        "badge": "aprendiz-dos-padroes"
+      },
+      "backgroundTarget": "worlds/jardim-neon/bg-clean.png",
+      "previewTarget": "worlds/jardim-neon/card.png",
+      "reference": "assets_referencias/jardim_neon_concept.png"
+    },
+    {
+      "id": "floresta-magica",
+      "name": "Floresta Mágica",
+      "startUnlocked": false,
+      "theme": "árvores bioluminescentes; azul/roxo",
+      "unlock": {
+        "levelAtLeast": 6,
+        "badge": "mestre-dos-caminhos"
+      },
+      "backgroundTarget": "worlds/floresta-magica/bg-clean.png",
+      "previewTarget": "worlds/floresta-magica/card.png",
+      "reference": "assets_referencias/floresta_magica_concept.png"
+    }
+  ],
+  "note": "Especificação de posicionamento. Coordenadas normalizadas no canvas virtual, validar contra artes limpas finais."
+}

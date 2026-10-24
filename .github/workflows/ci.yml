@@ -1,0 +1,43 @@
+name: BytePets — test and Docker PostgreSQL boot
+on:
+  push:
+  pull_request:
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: npm run check
+  postgres-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure test environment
+        run: |
+          cat > .env <<'ENV'
+          POSTGRES_DB=bytepets
+          POSTGRES_USER=bytepets
+          POSTGRES_PASSWORD=ciOnlyUseRandomTemporarySecret28
+          APP_PORT=4173
+          BIND_ADDRESS=127.0.0.1
+          ENV
+      - name: Build and start PostgreSQL + BytePets
+        run: docker compose -f compose.yaml -f compose.local.yaml up -d --build
+      - name: Verify API and PostgreSQL
+        run: |
+          for i in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:4173/api/health | grep -q '"database":"postgres"'; then
+              echo 'BytePets PostgreSQL online'
+              exit 0
+            fi
+            sleep 3
+          done
+          docker compose -f compose.yaml -f compose.local.yaml logs --no-color
+          exit 1
+      - name: Stop ephemeral containers
+        if: always()
+        run: docker compose -f compose.yaml -f compose.local.yaml down -v --remove-orphans

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "refugio",
+    "name": "Refúgio Pixel",
+    "minLevel": 1,
+    "requiresBadge": null,
+    "image": "/assets/worlds/refugio-base.png",
+    "window": "/assets/worlds/refugio-view.png",
+    "preview": "/assets/worlds/refugio-preview.png",
+    "description": "Seu lar entre circuitos e estrelas."
+  },
+  {
+    "id": "jardim",
+    "name": "Jardim Neon",
+    "minLevel": 3,
+    "requiresBadge": "padroes",
+    "image": "/assets/worlds/jardim-base.png",
+    "window": "/assets/worlds/jardim-view.png",
+    "preview": "/assets/worlds/jardim-preview.png",
+    "description": "Jardim de luz e descobertas."
+  },
+  {
+    "id": "floresta",
+    "name": "Floresta Mágica",
+    "minLevel": 6,
+    "requiresBadge": "caminhos",
+    "image": "/assets/worlds/floresta-base.png",
+    "window": "/assets/worlds/floresta-view.png",
+    "preview": "/assets/worlds/floresta-preview.png",
+    "description": "Mistérios e aventuras mágicas."
+  }
+]

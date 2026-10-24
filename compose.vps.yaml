@@ -1,0 +1,41 @@
+# Public VPS profile - requires DNS A/AAAA record, 80/443 reachable, Let's Encrypt email.
+services:
+  traefik:
+    image: traefik:v3.7
+    restart: unless-stopped
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+      - --certificatesresolvers.letsencrypt.acme.email=${ACME_EMAIL:?Set ACME_EMAIL in .env}
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+      - --api.dashboard=false
+      - --log.level=INFO
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - acme_data:/letsencrypt
+    networks:
+      - edge
+    security_opt:
+      - no-new-privileges:true
+  bytepets:
+    environment:
+      COOKIE_SECURE: 'true'
+      PUBLIC_BASE_URL: https://${APP_DOMAIN:?Set APP_DOMAIN in .env}
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=bytepets_edge
+      - traefik.http.routers.bytepets.rule=Host(`${APP_DOMAIN:?Set APP_DOMAIN in .env}`)
+      - traefik.http.routers.bytepets.entrypoints=websecure
+      - traefik.http.routers.bytepets.tls=true
+      - traefik.http.routers.bytepets.tls.certresolver=letsencrypt
+      - traefik.http.services.bytepets.loadbalancer.server.port=4173
+volumes:
+  acme_data:
